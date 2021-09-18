@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  id: String!
+  name: String!
+  dailyPrice: Float!
+  monthlyPrice: Float!
+  mileage: String!
+  gas: String!
+  transmission: String!
+  thumbnailUrl: String!
+}
+
+type Query {
+  cars: [Car!]!
+  getCars(transmission: String, gas: String): [Car!]!
+  getCar(id: String): Car!
+}
+
+type Mutation {
+  addNewCar(newCarData: NewCarInput!): Car!
+  deleteCar(carId: String!): Car!
+}
+
+input NewCarInput {
+  name: String!
+  dailyPrice: Int!
+  monthlyPrice: Int!
+  mileage: String!
+  gas: String!
+  transmission: String!
+  thumbnailUrl: String!
+}
